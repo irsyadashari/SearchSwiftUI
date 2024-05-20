@@ -22,7 +22,8 @@ on the star icon on the right of each cell.
 
 <img width="348" alt="image" src="https://github.com/irsyadashari/SearchSwiftUI/assets/36505012/046b4526-5044-4cb3-852a-30901366a639">
 
-#Unit Tests
+# Unit Tests
+
 In this project I only do Unit Tests in ViewModel class since it's the only class in this project that contains any logical bussiness. The purpose of the test is to make the the project fullfill all the product requirements.
 
 <img width="1166" alt="image" src="https://github.com/irsyadashari/SearchSwiftUI/assets/36505012/f7521314-6d5e-40e6-b63e-089ea06b480b">
