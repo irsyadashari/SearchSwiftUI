@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct EmptyResultView: View {
+    var title: String
+    var description: String
+    
     var body: some View {
         VStack {
             Image(systemName: "exclamationmark.triangle")
                 .font(.largeTitle)
                 .foregroundColor(.red)
                 .padding(.bottom, 8)
-            Text("No results found.")
+            Text(title)
                 .font(.headline)
                 .foregroundColor(.black)
                 .padding(.bottom, 4)
-            Text("Try refining your search.")
+            Text(description)
                 .font(.subheadline)
                 .foregroundColor(.gray)
         }
@@ -28,5 +31,5 @@ struct EmptyResultView: View {
 }
 
 #Preview {
-    EmptyResultView()
+    EmptyResultView(title: "Not Found", description: "Try another terms")
 }

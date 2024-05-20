@@ -40,7 +40,6 @@ struct ProductCellView: View {
                 .resizable()
                 .frame(width: 30, height: 30)
                 .onTapGesture {
-                    print("Image index: \(index) tapped!")
                     viewModel.toggleFavorite(id: item.id)
                 }
         }

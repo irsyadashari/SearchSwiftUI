@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFAC450E2BFB33A000C7DC65 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC450D2BFB33A000C7DC65 /* ViewModelTests.swift */; };
 		BFD03C122BFADE0D009AE095 /* SearchSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD03C112BFADE0D009AE095 /* SearchSwiftUIApp.swift */; };
 		BFD03C142BFADE0D009AE095 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD03C132BFADE0D009AE095 /* ContentView.swift */; };
 		BFD03C162BFADE10009AE095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD03C152BFADE10009AE095 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BFAC450D2BFB33A000C7DC65 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		BFD03C0E2BFADE0D009AE095 /* SearchSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD03C112BFADE0D009AE095 /* SearchSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSwiftUIApp.swift; sourceTree = "<group>"; };
 		BFD03C132BFADE0D009AE095 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD03C272BFADE10009AE095 /* SearchSwiftUITests.swift */,
+				BFAC450D2BFB33A000C7DC65 /* ViewModelTests.swift */,
 			);
 			path = SearchSwiftUITests;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAC450E2BFB33A000C7DC65 /* ViewModelTests.swift in Sources */,
 				BFD03C282BFADE10009AE095 /* SearchSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

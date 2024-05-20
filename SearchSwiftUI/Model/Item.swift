@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Item: Hashable, Identifiable {
+struct Item: Hashable, Identifiable, Equatable {
     let id = UUID()
     let name: String
     let description: String
@@ -15,5 +15,9 @@ struct Item: Hashable, Identifiable {
     
     mutating func toggleFavorite() {
         isFavorited = !isFavorited
+    }
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.id == rhs.id
     }
 }

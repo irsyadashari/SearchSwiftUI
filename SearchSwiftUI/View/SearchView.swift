@@ -20,7 +20,7 @@ struct SearchView: View {
             SearchBarView(searchText: $searchText)
             
             if searchedItems.isEmpty {
-                EmptyResultView()
+                EmptyResultView(title: "No Items Found.", description: "Please change your search term.")
             } else {
                 NavigationStack {
                     List(searchedItems, id: \.self) { item in
@@ -44,4 +44,5 @@ struct SearchBarView: View {
 
 #Preview {
     SearchView()
+        .environmentObject(ViewModel())
 }

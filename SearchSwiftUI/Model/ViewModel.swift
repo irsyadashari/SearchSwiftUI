@@ -10,6 +10,7 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published var items: [Item] =  [
         Item(name: "Sepatu", description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto", isFavorited: false),
+        Item(name: "Sarung", description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto", isFavorited: false),
         Item(name: "Sabun", description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto", isFavorited: false),
         Item(name: "Teh", description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto", isFavorited: false),
         Item(name: "Kopi", description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto", isFavorited: false),
@@ -19,12 +20,11 @@ class ViewModel: ObservableObject {
     
     func searchItem(name: String) -> [Item] {
         guard !name.isEmpty else { return items }
-        
         return items.filter { $0.name.lowercased().contains(name.lowercased()) }
     }
     
-    func getItem(at index: Int) -> Item {
-        return items[index]
+    func favoritedItem() -> [Item] {
+        return items.filter { $0.isFavorited }
     }
     
     func toggleFavorite(id : UUID) {

@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @EnvironmentObject var viewModel: ViewModel
+    
+    var favoritedItems: [Item] {
+        viewModel.favoritedItem()
+    }
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Favorites View")
-                    .font(.largeTitle)
-                Spacer()
+        VStack {
+            if favoritedItems.isEmpty {
+                EmptyResultView(title: "No Favorite Items", description: "Please Add Item to favorites")
+            } else {
+                NavigationStack {
+                    List(favoritedItems, id: \.self) { item in
+                        ProductCellView(item: item)
+                    }
+                }
             }
-            .navigationTitle("Favorites View")
         }
     }
 }
 
 #Preview {
     FavoritesView()
+        .environmentObject(ViewModel())
 }
